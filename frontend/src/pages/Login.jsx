@@ -22,8 +22,8 @@ export const Login = ({ setToken }) => {
       }
       toast.success("Login successful");
     } catch (error) {
-      alert(error.response?.data?.message);
-      toast.error("Login failed");
+      const message = error.response?.data?.message;
+      toast.error(message);
     }
   };
 

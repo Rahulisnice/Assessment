@@ -42,8 +42,8 @@ export const Dashboard = () => {
       }
       toast.success("User added successfully");
     } catch (error) {
-      console.error(error.response?.data?.message);
-      toast.error("Enter correct details");
+      const message = error.response?.data?.message;
+      toast.error(message);
     }
   };
 
@@ -56,8 +56,8 @@ export const Dashboard = () => {
       }
       toast.success("User updated successfully");
     } catch (error) {
-      console.error(error.response?.data?.message);
-      toast.error("Enter correct details");
+      const message = error.response?.data?.message;
+      toast.error(message);
     }
   };
 
@@ -70,8 +70,8 @@ export const Dashboard = () => {
       }
       toast.success("User deleted successfully");
     } catch (error) {
-      console.error(error.response?.data?.message);
-      toast.error("Failed to delete user");
+      const message = error.response?.data?.message;
+      toast.error(message);
     }
   };
 

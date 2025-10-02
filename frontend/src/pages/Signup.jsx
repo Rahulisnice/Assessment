@@ -33,8 +33,8 @@ export const Signup = ({ setToken }) => {
       }
       toast.success("Signup successful");
     } catch (error) {
-      alert(error.response?.data?.message);
-      toast.error("Signup failed");
+      const message = error.response?.data?.message;
+      toast.error(message);
     }
   };
 
